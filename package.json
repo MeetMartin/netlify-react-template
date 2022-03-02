@@ -1,0 +1,38 @@
+{
+  "name": "netlify-react-template",
+  "version": "1.0.0",
+  "description": "Netlify React Web Template",
+  "type": "module",
+  "module": "./src/index.js",
+  "sideEffects": false,
+  "exports": {
+    "module": "./src/index.js",
+    "import": "./src/index.js",
+    "require": "./dist/web.min.cjs"
+  },
+  "engines": {
+    "node": ">=12.16"
+  },
+  "scripts": {
+    "start": "webpack serve --progress --open --mode development --config webpack.development.config.js",
+    "maintain": "npx npm-check-updates -u & npm update && npm audit fix --force && npm test && npm run build",
+    "build": "webpack --progress --mode production --config webpack.production.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeetMartin/netlify-react-template.git"
+  },
+  "author": "Martin Novak <ragnarecek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MeetMartin/netlify-react-template/issues"
+  },
+  "homepage": "https://github.com/MeetMartin/netlify-react-template",
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.2.2",
+    "styled-components": "^5.3.3"
+  }
+}
