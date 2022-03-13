@@ -1,11 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
-import Routes from './Routes.js';
+import WebRoutes from './WebRoutes.js';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 const GlobalStyle  = createGlobalStyle`
     html, body {
@@ -20,9 +20,9 @@ const App = () => {
         <>
             <GlobalStyle />
             <Header />
-            <Router>
-                <Routes />
-            </Router>
+            <BrowserRouter>
+                <WebRoutes />
+            </BrowserRouter>
             <Footer />
         </>
     );

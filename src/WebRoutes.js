@@ -1,15 +1,15 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Page404 from './pages/404.js';
 import HomePage from './pages/HomePage.js';
 
-const Routes = () => (
-    <Switch>
+const WebRoutes = () => (
+    <Routes>
         <Route exact path='/' component={HomePage} />
 
         <Route component={Page404} />
-    </Switch>
+    </Routes>
 );
 
-export default Routes;
+export default WebRoutes;
